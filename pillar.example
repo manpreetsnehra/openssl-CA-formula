@@ -12,11 +12,11 @@ opensslca:
   - caName: Organization Root Certificate
   - capassword: password 
     
-opensslcert:
+gencert:
   - validity: 365
   - fqdn:
-    - host.example.com
+    - host.example.com:
     
-opensslrevoke:
+revokecert:
   - fqdn:
-    - hosts.example.com    
+    - hosts.example.com
