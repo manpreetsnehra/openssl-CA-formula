@@ -1,4 +1,4 @@
-{% for fqdn in salt['pillar.get']{gencert:fqdn} %}
+{% for fqdn in salt['pillar.get'](gencert:fqdn) %}
 gencsrkey:
   cmd.run:
     - unless: test -f {{ salt['pillar.get'](opensslca:configdir) }}/private/{{ fqdn }}.key

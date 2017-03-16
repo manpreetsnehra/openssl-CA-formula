@@ -1,4 +1,4 @@
-{% for fqdn in salt['pillar.get']{opensslcert:fqdn} %}
+{% for fqdn in salt['pillar.get'](revokecert:fqdn) %}
 revokecert:
   cmd.run:
     - unless: `cat {{ salt['pillar.get'](opensslca:configdir) }}/index.txt|grep ^V|grep {{ fqdn }}| wc -l` == 1
