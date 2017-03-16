@@ -1,9 +1,5 @@
 opensslca:
-{% if salt['grains.get']('os_family') == 'Debian' -%}
-  - configdir: /etc/ssl
-{% elif salt['grains.get']('os_family') == 'Redhat' -%}
-  - configdir: /etc/pki/CA
-{% endif -%}
+  - configdir: /etc/ssl/CA
   - countryName: Some Country
   - provinceName: Some State
   - cityName: Some City
