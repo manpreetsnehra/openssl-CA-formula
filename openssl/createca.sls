@@ -1,3 +1,12 @@
+{{ salt['pillar.get'](opensslca:configdir) }}:
+  file.directory:
+    - makedirs: True    
+    - user: root
+    - group: root
+    - file_mode: 600
+    - dir_mode: 700
+    - replace: false
+    
 {{ salt['pillar.get'](opensslca:configdir) }}/crlnumber:
   file.managed:
     - source: salt://openssl/files/crlnumber    
