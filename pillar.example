@@ -17,7 +17,3 @@ gencert:
 revokecert:
   - fqdn:
     - host0.example.com
-    
-gencsr:
-  - fqdn:
-    - host0.example.com    

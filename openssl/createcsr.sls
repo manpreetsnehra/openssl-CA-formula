@@ -1,4 +1,4 @@
-{% for fqdn in salt['pillar.get']('gencsr:fqdn') %}
+{% for fqdn in salt['pillar.get']('gencert:fqdn') %}
 gencsrkey:
   cmd.run:
     - unless: (cat {{ salt['pillar.get']('opensslca:cadir') }}/index.txt|grep ^V|grep {{ fqdn }}| wc -l) == 0
