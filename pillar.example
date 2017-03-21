@@ -1,18 +1,23 @@
 opensslca:
-  - configdir: /etc/ssl/CA
-  - countryName: Some Country
+  - configdir: /etc/ssl
+  - cadir: /etc/ssl/CA
+  - countryName: SC
   - provinceName: Some State
   - cityName: Some City
   - organizationName: Some Organization
   - adminEmail: admin@example.com
   - caName: Organization Root Certificate
-  - capassword: password 
+  - capassword: password
+  - ca: True
     
-gencert:
-  - validity: 365
+gencert: 
   - fqdn:
-    - host.example.com:
+    - host0.example.com
     
 revokecert:
   - fqdn:
-    - hosts.example.com
+    - host0.example.com
+    
+gencsr:
+  - fqdn:
+    - host0.example.com    
