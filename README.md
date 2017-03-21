@@ -23,7 +23,3 @@ gencert:
 revokecert:
   - fqdn:
     - host0.example.com      # hosts/user for which you want to revoke the certificate
-    
-gencsr:
-  - fqdn:
-    - host0.example.com      #hosts/users for which csrs are required for now these should match gencert atleast
