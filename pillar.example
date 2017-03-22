@@ -15,5 +15,7 @@ gencert:
     - host0.example.com
     
 revokecert:
+  - revoke: False
   - fqdn:
     - host0.example.com
+
