@@ -16,5 +16,5 @@ gencrl:
     - require: 
       - pkg: openssl_install          
       - cmd: createcacert
-      - cmd: revoke          
+      - cmd: revoke         
 {% endfor %}

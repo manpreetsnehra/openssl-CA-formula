@@ -75,6 +75,15 @@
     - dir_mode: 700
     - replace: false 
     
+{{ salt['pillar.get']('opensslca:cadir') }}/revoked:
+  file.directory:
+    - makedirs: True    
+    - user: root
+    - group: root
+    - file_mode: 600
+    - dir_mode: 700
+    - replace: false 
+    
 {{ salt['pillar.get']('opensslca:configdir') }}/openssl.cnf:
   file.managed:
     - source: salt://openssl/templates/openssl.jinja

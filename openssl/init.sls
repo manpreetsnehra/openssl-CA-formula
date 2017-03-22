@@ -8,6 +8,6 @@ include:
 {% endif %}
   - openssl.createcsr
 {% if myca %}    
-  - openssl.createcerts
-  - openssl.revokecerts  
+  - openssl.revokecerts
+  - openssl.createcerts  
 {% endif %}  
