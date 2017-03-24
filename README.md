@@ -21,5 +21,6 @@ gencert:
     - host0.example.com      #hosts/user for which you want to generate signed certificate
     
 revokecert:
+  - revoke: False #Whether to revoke any certificates or not.
   - fqdn:
     - host0.example.com      # hosts/user for which you want to revoke the certificate
